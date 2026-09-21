@@ -1,0 +1,64 @@
+{
+  "id": "gpt_image",
+  "label": "GPT-Image 2.5 — Bild",
+  "target": "gpt-image-2.5-sunburst (Editieren) und gpt-image-2.5-flare (Generieren), OpenAI",
+  "kind": "image",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "camera_notes"
+  ],
+  "negative_prompt": {
+    "used": false
+  },
+  "length": {
+    "target_chars": 760,
+    "max_chars": 1800
+  },
+  "explicit_vocabulary": "none",
+  "ui_note": "OpenAI filtert Inhalte. Dieses Profil formuliert deshalb nicht explizit — für explizite Motive eines der lokalen Profile wählen.",
+  "rules": {
+    "must": [
+      "Full sentences with clear instructions. This model follows long, precise descriptions better than keyword stacks.",
+      "State the medium and style explicitly at the start: photograph, illustration, 3D render, oil painting.",
+      "Describe the spatial layout: what is in the foreground, middle ground and background, and where in the frame.",
+      "Any text that must appear in the image goes in quotation marks, with its position and style.",
+      "For edits, name exactly what changes and what must stay untouched.",
+      "When a subject sits, lies or leans on furniture, state the scale so proportions do not drift: 'realistic human proportions relative to the furniture, same scale as a real adult'."
+    ],
+    "avoid": [
+      "Comma-separated tag lists.",
+      "Negative prompt syntax — this system has none.",
+      "Explicit sexual content — the target system rejects it."
+    ]
+  },
+  "preferred_terms": [
+    "a photograph of",
+    "an illustration of",
+    "a 3D render of",
+    "in the foreground",
+    "in the background",
+    "centred in the frame",
+    "soft diffused light",
+    "dramatic side lighting",
+    "shallow depth of field",
+    "flat lay",
+    "isometric view",
+    "muted colour palette",
+    "high contrast"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "8k",
+    "highly detailed",
+    "ultra realistic",
+    "award-winning",
+    "stunning",
+    "photorealistic masterpiece"
+  ],
+  "notes_for_model": "GPT-Image follows instructions rather than keywords and is strong at text inside images and at precise layout. Longer, well-structured sentences beat dense keyword stacks.",
+  "aspect_ratio_in_prompt": true,
+  "reference_slots": true
+}

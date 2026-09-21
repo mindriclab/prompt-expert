@@ -1,0 +1,98 @@
+{
+  "id": "ltx23_i2v",
+  "label": "LTX 2.3 — Image-to-Video mit Audio & Dialog",
+  "target": "LTX Video 2.3, ComfyUI",
+  "kind": "video",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "negative_prompt"
+  ],
+  "negative_prompt": {
+    "used": true,
+    "style": "tags",
+    "base": [
+      "music",
+      "subtitles",
+      "text",
+      "watermark",
+      "overlay effects",
+      "still image",
+      "static",
+      "blur",
+      "low quality",
+      "censoring",
+      "beeping",
+      "newscast",
+      "interview",
+      "podcast",
+      "non-english",
+      "foreign language",
+      "video game",
+      "cartoon",
+      "mutant",
+      "deformed"
+    ]
+  },
+  "length": {
+    "target_chars": 1300,
+    "max_chars": 2600
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Everything goes into main_prompt as one continuous block: the action, the camera path, the sound and any dialogue. There are no separate motion, audio or camera fields - the user pastes main_prompt into a single field in the generator.",
+      "Plain English prose. No headings, no labels, no bullet lists.",
+      "Open with the state of the opening frame, untimed, only as far as needed to anchor who is where.",
+      "Then drive the action with time brackets in the form [0-4 sec], [4-6 sec], [6-11 sec], [11+ sec]. The last bracket is open-ended. Brackets run in order and must not overlap.",
+      "Inside each bracket describe every moving body part, every composition change and every manipulation in that window - plus the reaction it causes.",
+      "If the scene is explicit, use full anatomical terminology and visually representable erotic detail.",
+      "Put sound where it happens: ambience, foley, natural and explicit sounds, either inside the bracket they belong to or as one closing sentence describing the whole soundscape.",
+      "Dialogue goes in quotation marks, preceded by the voice tone, inside the bracket where it is spoken. Keep lines short - long dialogue costs video quality."
+    ],
+    "avoid": [
+      "Overlapping or out-of-order time brackets.",
+      "A bracket that describes no change - if nothing happens, merge it with the previous one.",
+      "Embellishment that describes nothing visible or audible.",
+      "Long rambling dialogue - it degrades video quality.",
+      "Background music description unless no dialogue and no soundscape fits the scene."
+    ]
+  },
+  "preferred_terms": [
+    "[0-4 sec]",
+    "[4-6 sec]",
+    "[6-11 sec]",
+    "[11+ sec]",
+    "the camera holds",
+    "slow push in",
+    "she turns her head",
+    "his hand slides",
+    "breath catches",
+    "fabric rustles",
+    "wet sounds",
+    "low moan",
+    "whispered",
+    "hushed tone",
+    "room tone",
+    "distant traffic",
+    "floorboard creak",
+    "skin contact"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "cinematic",
+    "breathtaking",
+    "stunning",
+    "the scene unfolds",
+    "in this captivating video"
+  ],
+  "notes_for_model": "LTX 2.3 consumes one long plain-text block and generates synchronised audio. Time brackets like [0-4 sec] are the working format on this setup - they anchor motion, sound and dialogue to the same timeline. The negative prompt here mostly suppresses unwanted AUDIO (music, narration, bleeps, foreign language) alongside the usual visual artefacts.",
+  "aspect_ratio_in_prompt": false,
+  "reference_slots": true,
+  "video_sources": [
+    "startframe",
+    "references"
+  ]
+}

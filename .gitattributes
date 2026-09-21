@@ -1,0 +1,7 @@
+# Zeilenenden normalisieren: im Repo LF, im Arbeitsverzeichnis nach Plattform.
+* text=auto
+
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+*.png binary

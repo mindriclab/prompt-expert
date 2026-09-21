@@ -1,0 +1,63 @@
+{
+  "id": "flux_image",
+  "label": "FLUX / Krea — Bild",
+  "target": "FLUX.1, Krea, ComfyUI",
+  "kind": "image",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "camera_notes"
+  ],
+  "negative_prompt": {
+    "used": false
+  },
+  "length": {
+    "target_chars": 700,
+    "max_chars": 1600
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Write flowing natural-language sentences, not comma-separated tags.",
+      "Open with subject and action, then wardrobe and body detail, then environment, then light, then camera.",
+      "Name concrete materials, textures and colours instead of adjectives like beautiful or detailed.",
+      "State the lighting setup explicitly: source, direction, hardness, colour temperature.",
+      "When a subject sits, lies or leans on furniture, state the scale so proportions do not drift: 'realistic human proportions relative to the furniture, same scale as a real adult'."
+    ],
+    "avoid": [
+      "Negative prompt syntax — FLUX ignores it.",
+      "Token weights such as (term:1.2).",
+      "Stacked quality boosters."
+    ]
+  },
+  "preferred_terms": [
+    "shallow depth of field",
+    "85mm portrait lens",
+    "rim light",
+    "practical light",
+    "volumetric haze",
+    "skin texture with visible pores",
+    "film grain",
+    "natural colour grade",
+    "three-quarter view",
+    "eye-level",
+    "low angle",
+    "overcast soft light",
+    "golden hour backlight"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "8k",
+    "highly detailed",
+    "award-winning",
+    "stunning",
+    "breathtaking",
+    "trending on artstation",
+    "ultra realistic"
+  ],
+  "notes_for_model": "FLUX follows long natural prose reliably and rewards precise spatial language. Put the single most important visual fact in the first twelve words.",
+  "aspect_ratio_in_prompt": false,
+  "reference_slots": false
+}

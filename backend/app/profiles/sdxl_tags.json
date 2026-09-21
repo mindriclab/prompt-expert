@@ -1,0 +1,78 @@
+{
+  "id": "sdxl_tags",
+  "label": "SDXL / Pony / Illustrious — Tags",
+  "target": "SDXL, Pony Diffusion, Illustrious, ComfyUI",
+  "kind": "image",
+  "grammar": "tags",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "negative_prompt"
+  ],
+  "negative_prompt": {
+    "used": true,
+    "style": "tags",
+    "base": [
+      "lowres",
+      "bad anatomy",
+      "bad hands",
+      "extra digits",
+      "fewer digits",
+      "text",
+      "watermark",
+      "signature",
+      "jpeg artifacts",
+      "blurry",
+      "deformed",
+      "mutated",
+      "extra limbs",
+      "worst quality"
+    ]
+  },
+  "length": {
+    "target_chars": 420,
+    "max_chars": 1100
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Comma-separated Danbooru-style tags in lowercase, no sentences.",
+      "Order: subject count and type, body and hair, expression, wardrobe, pose and action, explicit tags, setting, lighting, composition, style.",
+      "Use established booru tag spellings (1girl, solo, looking at viewer, from below, cowboy shot).",
+      "Weight at most three tags with (tag:1.1) to (tag:1.4)."
+    ],
+    "avoid": [
+      "Full sentences or prose connectors.",
+      "Invented tags that no booru tagger uses.",
+      "More than three weighted tags."
+    ]
+  },
+  "preferred_terms": [
+    "1girl",
+    "1boy",
+    "solo",
+    "looking at viewer",
+    "cowboy shot",
+    "full body",
+    "from below",
+    "from above",
+    "dutch angle",
+    "depth of field",
+    "backlighting",
+    "cinematic lighting",
+    "detailed skin",
+    "wet skin",
+    "sweat",
+    "parted lips"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "8k",
+    "ultra detailed",
+    "absurdres"
+  ],
+  "notes_for_model": "Pony and Illustrious checkpoints respond to score tags, but this profile leaves them out on purpose — the user adds the checkpoint-specific prefix. Deliver only content tags.",
+  "aspect_ratio_in_prompt": false,
+  "reference_slots": false
+}

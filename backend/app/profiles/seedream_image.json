@@ -1,0 +1,66 @@
+{
+  "id": "seedream_image",
+  "label": "Seedream 4.5 / 5 — Bild",
+  "target": "Seedream 4.5 und 5 (ByteDance)",
+  "kind": "image",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "camera_notes"
+  ],
+  "negative_prompt": {
+    "used": false
+  },
+  "length": {
+    "target_chars": 420,
+    "max_chars": 1200
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Natural language. Build the content from subject + action + environment, then add short words for style, colour, lighting and composition.",
+      "Be concrete instead of abstract: 'a woman in a linen dress walking a tree-lined avenue, Monet oil painting style' beats 'woman, street, painterly'.",
+      "Name explicit anatomy directly and plainly when it is part of the scene. Short declarative sentences work better here than elaborate phrasing.",
+      "End with the shot size when it matters: 'Full-body shot.', 'Close-up.'",
+      "Any text that must appear in the image goes in quotation marks.",
+      "With several reference images, say which image supplies which element."
+    ],
+    "avoid": [
+      "Comma-separated tag lists.",
+      "Negative prompt syntax — this system has no negative prompt.",
+      "Style words standing alone without a subject.",
+      "Scale or proportion clauses when no person is in the scene - they only apply to people."
+    ]
+  },
+  "preferred_terms": [
+    "Full-body shot",
+    "Close-up",
+    "looks seductively at the camera",
+    "looking directly at the camera",
+    "clearly visible in detail",
+    "realistic human proportions relative to the surrounding objects",
+    "soft window light",
+    "hard directional light",
+    "overcast daylight",
+    "golden hour",
+    "shallow depth of field",
+    "editorial photography",
+    "cinematic still",
+    "shot from a low angle",
+    "centred composition"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "8k",
+    "highly detailed",
+    "ultra realistic",
+    "award-winning",
+    "stunning",
+    "trending on artstation"
+  ],
+  "notes_for_model": "Seedream follows short, concrete, declarative sentences better than long flowing prose. It renders quoted text well and reads editing instructions in the form Action + Object + Attribute, for example 'replace the jacket with a red leather one'. Keep style descriptors short and attached to a concrete subject.",
+  "aspect_ratio_in_prompt": true,
+  "reference_slots": true
+}

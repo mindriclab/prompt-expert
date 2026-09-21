@@ -1,0 +1,77 @@
+{
+  "id": "wan22_i2v",
+  "label": "WAN 2.2 — Image-to-Video",
+  "target": "WAN 2.2 I2V, ComfyUI",
+  "kind": "video",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "negative_prompt"
+  ],
+  "negative_prompt": {
+    "used": true,
+    "style": "tags",
+    "base": [
+      "static image",
+      "still frame",
+      "jitter",
+      "morphing limbs",
+      "extra limbs",
+      "warped face",
+      "flickering",
+      "text overlay",
+      "watermark",
+      "low resolution",
+      "oversaturated",
+      "abrupt cut"
+    ]
+  },
+  "length": {
+    "target_chars": 900,
+    "max_chars": 2000
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Everything goes into main_prompt as one continuous block: the action, the camera path, the sound and any dialogue. There are no separate motion, audio or camera fields - the user pastes main_prompt into a single field in the generator.",
+      "Describe the starting state first, then how it evolves - the model animates from the reference image.",
+      "One continuous camera move, named explicitly, inside the same block.",
+      "Name the continuity anchors that must not drift: hair, wardrobe, body shape, setting.",
+      "When the camera moves with a walking subject, lock the scale explicitly: 'the camera moves back at their walking pace so they stay the same size in frame'."
+    ],
+    "avoid": [
+      "Scene cuts or multiple shots in one prompt, unless the user's briefing defines them.",
+      "Two conflicting camera moves at the same moment.",
+      "Section labels, headings or field names inside the prompt."
+    ]
+  },
+  "preferred_terms": [
+    "slow dolly in",
+    "dolly out",
+    "handheld drift",
+    "orbit left",
+    "static locked-off shot",
+    "subtle breathing motion",
+    "hair moved by wind",
+    "fabric settling",
+    "weight shift",
+    "head turns toward camera",
+    "eyes track the lens",
+    "continuous single take",
+    "stays the same size in frame",
+    "camera matches their walking pace"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "cinematic masterpiece",
+    "stunning visuals"
+  ],
+  "notes_for_model": "WAN 2.2 honours the negative prompt and drifts when asked for too much motion at once. Prefer one clear action plus one secondary micro-motion.",
+  "aspect_ratio_in_prompt": false,
+  "reference_slots": false,
+  "video_sources": [
+    "startframe"
+  ]
+}

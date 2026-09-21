@@ -1,0 +1,57 @@
+{
+  "id": "minimax_video",
+  "label": "MiniMax — Video",
+  "target": "MiniMax Hailuo, ComfyUI",
+  "kind": "video",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt"
+  ],
+  "negative_prompt": {
+    "used": false
+  },
+  "length": {
+    "target_chars": 500,
+    "max_chars": 1200
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Everything goes into main_prompt as one continuous block: the action, the camera path, the sound and any dialogue. There are no separate motion, audio or camera fields - the user pastes main_prompt into a single field in the generator.",
+      "Short and concrete. MiniMax degrades with long prompts.",
+      "One subject action, one camera move, one lighting statement."
+    ],
+    "avoid": [
+      "Lists of adjectives.",
+      "More than two simultaneous motions.",
+      "Scene cuts, unless the user's briefing defines them.",
+      "Section labels or field names inside the prompt."
+    ]
+  },
+  "preferred_terms": [
+    "medium shot",
+    "close-up",
+    "wide shot",
+    "push in",
+    "pull back",
+    "pan right",
+    "tracking shot",
+    "natural motion",
+    "soft key light",
+    "shallow focus"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "8k",
+    "hyperrealistic"
+  ],
+  "notes_for_model": "Keep it under roughly eighty words in the balanced density. Extra detail costs coherence here.",
+  "aspect_ratio_in_prompt": false,
+  "reference_slots": true,
+  "video_sources": [
+    "startframe",
+    "references"
+  ]
+}

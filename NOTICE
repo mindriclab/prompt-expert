@@ -1,0 +1,32 @@
+Prompt Expert
+Copyright 2026 mindric lab
+
+Dieses Produkt steht unter der Apache License 2.0 (siehe LICENSE).
+
+
+Nicht von der Lizenz erfasst
+----------------------------
+
+Die Lizenz gilt für den Quellcode. Sie gewährt ausdrücklich keine Rechte an
+Marke, Name oder Logo (Apache License 2.0, Abschnitt 6).
+
+Davon ausgenommen sind insbesondere:
+
+  - die Namen "mindric lab" und "Prompt Expert"
+  - das Wortlogo in frontend/public/mindric-lab.png
+  - der Hinweis "© by mindric lab" in der Oberfläche
+
+Wer den Code forkt oder weiterverwendet, ersetzt diese Kennzeichen bitte durch
+eigene. Der Code funktioniert ohne sie unverändert.
+
+
+Verwendete Bibliotheken
+-----------------------
+
+Backend:  FastAPI, Starlette, Pydantic, Uvicorn, httpx, Pillow (jeweils unter
+          eigenen, permissiven Lizenzen - siehe backend/requirements.txt)
+Frontend: React, Vite, TypeScript (dito - siehe frontend/package.json)
+
+Die App bindet keine Modelle, Modellgewichte oder Prompt-Sammlungen ein. Das
+Sprachmodell läuft getrennt davon auf dem eigenen Rechner und unterliegt seinen
+eigenen Bedingungen.

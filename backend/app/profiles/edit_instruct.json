@@ -1,0 +1,50 @@
+{
+  "id": "edit_instruct",
+  "label": "Identity-Edit / HeadSwap / Qwen-Edit",
+  "target": "Krea Identity-Edit LoRA, FLUX Klein HeadSwap, Qwen-Image-Edit",
+  "kind": "edit",
+  "grammar": "prose",
+  "language": "en",
+  "fields": [
+    "main_prompt",
+    "camera_notes"
+  ],
+  "negative_prompt": {
+    "used": false
+  },
+  "length": {
+    "target_chars": 400,
+    "max_chars": 1200
+  },
+  "explicit_vocabulary": "anatomical",
+  "rules": {
+    "must": [
+      "Write as an instruction to change the input image, not as a description of a new image.",
+      "Name exactly what changes, then name what must stay identical.",
+      "When several references are supplied, say which reference supplies which element.",
+      "Keep lighting and perspective consistency explicit — that is where edit models break."
+    ],
+    "avoid": [
+      "Describing the whole scene from scratch.",
+      "Vague instructions such as 'make it better'.",
+      "Changing more than three things in one pass."
+    ]
+  },
+  "preferred_terms": [
+    "keep the original lighting direction",
+    "preserve the background unchanged",
+    "match skin tone and grain",
+    "retain the original pose",
+    "blend the hairline naturally",
+    "keep the camera perspective",
+    "replace only"
+  ],
+  "banned_phrases": [
+    "masterpiece",
+    "best quality",
+    "photorealistic masterpiece"
+  ],
+  "notes_for_model": "Edit models follow imperative sentences. The list of what must remain unchanged is as important as the change itself.",
+  "aspect_ratio_in_prompt": false,
+  "reference_slots": true
+}
