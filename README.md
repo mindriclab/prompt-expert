@@ -6,6 +6,8 @@ eigenen Rechner, ohne Account, ohne Cloud, ohne Telemetrie.
 
 Die App generiert selbst keine Bilder und keine Videos. Sie liefert Prompts zum Kopieren.
 
+> **Fertige Windows-Version zum Direktstarten:** [mindriclab.gumroad.com/l/prompt-expert](https://mindriclab.gumroad.com/l/prompt-expert). Ohne Python-, Node- oder Build-Einrichtung. Der Quellcode hier bleibt frei.
+
 ![Prompt Expert — Ergebnisansicht mit drei Varianten](screenshots/01-werkstatt.png)
 
 ## Wofür das gut ist
